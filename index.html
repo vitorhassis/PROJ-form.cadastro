@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="shortcut icon" href="img/faviconvh.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> <!--- div principal. dentro dela terao outras duas divs. uma do formulario, e uma da imagem!-->
+    <div class="form-image">
+        <img src="img/undraw_deliveries_2r4y.svg" alt="imagem personagens">
+    </div>
+    <div class="form">
+        <form action="#"> <!--- # pq n vamos ter nada de js aqui, apenas html e css-->
+            <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="login-button">
+                    <button><a href="#">Entrar</a></button>
+                </div>
+            </div>
+            
+            <div class="input-group"> <!--- DIV QUE INCLUI TODOS OS INPUT'S-->
+                <div class="input-box">
+                    <label for="firstname">Primeiro nome</label>
+                    <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required> <!--- para quando vc clicar sobre o "primeiro nome" ele ativar a caixinha-->
+                </div>
+                <div class="input-box">
+                    
+                    <label for="lastename">Sobrenome</label>
+                    <input id="lastname" type="text" name="lastname"  placeholder="Digite seu sobrenome" required> <!--- para quando vc clicar sobre o "primeiro nome" ele ativar a caixinha eh necessario o label e input terem o mesmo x em for e id. o name vc so coloca o mesmo que o em id. REQUIRED, eh para obrigar o usuario a preencher o espaço. e o PLACEHOLDER eh para ficar essa msg de fundo do espaço.-->
+                </div>
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required> 
+                </div>
+                <div class="input-box">
+                    <label for="number">Celular</label> <!--- os input de cima, foram de text, um de email, e esse como eh para colocar o numero do usuario, o tipo eh tel.de telefone. No de senha, password, o type eh password-->
+                    <input id="number" type="tel" name="number" placeholder="(XX) xxxx-xxxx" required> 
+                </div>
+                <div class="input-box">
+                    <label for="passoword">Senha</label>
+                    <input id="passoword" type="password" name="passoword" placeholder="Digite sua senha" required> 
+                </div>
+                <div class="input-box">
+                    <label for="confirmpassoword">Confirme sua senha</label>
+                    <input id="confirmpassoword" type="password" name="confirmpassoword" placeholder="Digite sua senha novamente" required> 
+                </div>
+            </div>
+
+            <div> <!---GENERO-->
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                        <div class="gender-group">
+                            <div class="gender-input"> <!--- os input's radios tem o mesmo name, para fazer com que ao clicar em um, vc n consiga selecionar outro.-->
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Feminino</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Masculino</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="others" name="gender">
+                                <label for="others">Outros</label>
+                            </div>
+                            <div class="gender-input">
+                                <input type="radio" id="none" name="gender">
+                                <label for="none">Prefiro não dizer</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="continue-button">
+                        <button><a href="#">Continuar</a></button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

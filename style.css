@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex; /*faz com que a div form-box se torne um container, a partir dai podemos manipular todos os elementos filhos desse flex container com propriedades novas, como o align-items e justify-content*/
+    justify-content: center;  /*alinha as divs internas horizontalmente*/
+    align-items: center; /*divs internas centralizadas verticalmente*/
+    background-color: rgb(118, 118, 196);
+}
+
+.container { /*container eh o quadrado maior, q ta tudo dentro dele*/
+    width:80%;
+    height: 80vh;
+    display: flex;/*faz com que a div container se torne um container, a partir dai podemos manipular todos os elementos filhos desse flex container com propriedades novas, como o align-items e justify-content*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233);
+}
+
+.form-image {
+    width: 50%; /*basicamente 50% do container, que eh 80% da largura da tela.*/
+    display: flex; /*faz com que a div form-image se torne um container, a partir dai podemos manipular todos os elementos filhos desse flex container com propriedades novas, como o align-items e justify-content*/
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    /*div que possui os complementos com inputs*/
+    width: 50%;
+    display: flex; /*vc tem q por display flex, se n n consegue manipular os elementos filhos, que estao presentes dentro desta div, no caso todos os inputs como FIRSTNAME, LASTNAME, EMAIL, TEL, PASSWORD, CONFIRMPASSOWRD, GENERO*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*para ficar um embaixo do outro, em vez de um do lado do outro*/
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex; /*novamente. para voce conseguir alinhar os elementos filhos de uma div, usando justify-content center ou space between, align items, eh necessario vc colocar display flex*/
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: rgb(104, 104, 252);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: rgb(104, 104, 252);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    /*para fazer essa barrinha embaixo do cadastre-se, nunca tinha feito antes, ent n entendi muito bem como funciona*/
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: rgb(104, 104, 252);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /*para quebrar e ficar um ao lado do outro*/
+    justify-content: space-between; /*para quebrar e ficar um ao lado do outro*/
+    padding: 19px;
+    margin-right: 10px; /*para quebrar e ficar um ao lado do outro*/
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column; /*para os inputs, ou seja os espacos que serao preenchidos, ficarem embaixo do label*/
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none; /*vc tira a borda, e faz ficar so a sombrinha como borda, mt mais bonito e correto.*/
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px  rgba(0, 0, 0, 0.24);
+}
+
+.input-box input:hover {
+    background-color: rgba(224, 224, 224, 0.267);
+}
+
+.input-box input:focus-visible {
+    /*mudar a cor da borda, qnd vc clicar para escrever, a borda vai ficar desta cor escolhida abaixo. OUTLINE 1PX SOLID X */
+    outline: 1px solid rgb(104, 104, 252);
+}
+
+.input-box label,
+.gender-title h6 {
+    /*para configurar os textos dos label's. como genero, senha, etc*/
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    font-size: 0.7rem;
+    /*tem como vc personalizar a cor do placeholder.*/
+    color: #000000be;
+}
+
+.gender-group {
+    /*estilizando os input's de genero*/
+    display: flex; /*para ficar um ao lado do outro*/
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 1 0.5rem;
+    
+}
+
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 8rem;
+    border: none;
+    background-color: rgb(104, 104, 252);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: rgba(104, 104, 252, 0.712);
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: white;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none; /*n vai aparecer*/
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column; /*para ficar um embaixo do outro*/
+        overflow-y: scroll; /*para criar o scroll*/
+        flex-wrap: nowrap; /*pra n quebrar*/
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
