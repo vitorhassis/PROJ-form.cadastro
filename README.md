@@ -6,7 +6,7 @@
 
 ---
 
-## 📷 Demonstração  
+<h2 align="center">📷 Demonstração 📷</h2> 
 
 <div align="center">
   <img height="350" src="https://github.com/user-attachments/assets/08c35198-caef-4bfc-8155-1717d958ba1d" />
